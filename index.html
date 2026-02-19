@@ -27,7 +27,7 @@
       </ul>
     </nav>
 
-    <a href="images/cv/Samir Pudasaini CV.pdf .pdf" class="cta-button" download="Samir Pudasaini CV.pdf">Resume ↓</a>
+    <a href="#" class="cta-button" download="Samir Pudasaini CV.pdf">Resume ↓</a>
   </header>
 
   <!-- Mobile Bottom Navigation -->
@@ -269,13 +269,46 @@
       <!-- Success / error message will appear here -->
       <div id="form-message" class="form-message" aria-live="polite"></div>
     </form>
+    <script>
+      import { getFirestore, addDoc, collection } from 'firebase/firestore';
+
+        // ... (your Firebase initialization and db instance)
+
+        const contactForm = document.getElementById('contact-form');
+        const formMessage = document.getElementById('form-message');
+
+        contactForm.addEventListener('submit', async (e) => {
+          e.preventDefault(); // Prevent default form submission
+
+          const name = contactForm.elements['name'].value;
+          const email = contactForm.elements['email'].value;
+          const message = contactForm.elements['message'].value;
+
+          try {
+            await addDoc(collection(db, 'contacts'), {
+              name: name,
+              email: email,
+              message: message,
+              timestamp: Date.now()
+            });
+            formMessage.textContent = 'Message sent successfully!';
+            formMessage.style.color = 'green';
+            contactForm.reset(); // Clear the form
+          } catch (error) {
+            console.error("Error adding document: ", error);
+            formMessage.textContent = 'Failed to send message.';
+            formMessage.style.color = 'red';
+          }
+        });
+
+    </script>
   </section>
   </main>
 
   <footer>
     <p>© 2026 Samir Pudasaini — All rights reserved</p>
   </footer>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
   <script src="js/script.js"></script>
 </body>
 
