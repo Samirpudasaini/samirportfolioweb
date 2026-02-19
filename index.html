@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samir Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Desktop Header (hidden on mobile) -->
+  <header id="header">
+    <div class="logo">Samir</div>
+
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <a href="images/cv/Samir Pudasaini CV.pdf .pdf" class="cta-button" download="Samir Pudasaini CV.pdf">Resume ↓</a>
+  </header>
+
+  <!-- Mobile Bottom Navigation -->
+  <nav class="mobile-bottom-nav">
+    <ul>
+      <li>
+        <a href="#hero">
+          <svg viewBox="0 0 24 24">
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+          </svg>
+          <span>Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="#about">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+          </svg>
+          <span>About</span>
+        </a>
+      </li>
+      <li>
+        <a href="#projects">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+          </svg>
+          <span>Projects</span>
+        </a>
+      </li>
+      <li>
+        <a href="#contact">
+          <svg viewBox="0 0 24 24">
+            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+          </svg>
+          <span>Contact</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="hero">
+      <div class="hero-content">
+        <h1>Hi, I'm Samir</h1>
+        <p>Web Developer & AI/ML Enthusiast<br>Building clean, thoughtful digital experiences</p>
+
+        <div class="buttons">
+          <a href="images/cv/Samir Pudasaini CV.pdf" class="button" download="Samir Pudasaini CV.pdf">
+            Resume ↓
+          </a>
+          <a href="#contact" class="button">Contact Me</a>
+        </div>
+
+        <!-- Social icons – added here -->
+        <div class="hero-social">
+          <a href="https://github.com/Samirpudasaini" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg class="social-icon github" viewBox="0 0 24 24">
+              <path
+                d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.377.202 2.394.1 2.647.64.699 1.026 1.592 1.026 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.854 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12c0-5.523-4.478-10-10-10z" />
+            </svg>
+          </a>
+
+          <a href="https://www.linkedin.com/in/samir-pudasaini-b6840927b" target="_blank" rel="noopener noreferrer"
+            aria-label="LinkedIn">
+            <svg class="social-icon linkedin" viewBox="0 0 24 24">
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-1.337-.029-3.058-1.867-3.058-1.867 0-2.152 1.459-2.152 2.966v5.696h-3v-11h2.882v1.509h.039c.401-.757 1.381-1.557 2.837-1.557 3.033 0 3.597 1.997 3.597 4.597v6.451z" />
+            </svg>
+          </a>
+
+          <a  target="_blank" rel="noopener noreferrer" aria-label="Email" >
+            <svg class="social-icon gmail" viewBox="0 0 24 24">
+              <path
+                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="about-wrapper">
+        <div class="image-wrapper reveal">
+          <img src="images/samir-potrait.png" alt="Samir portrait" class="profile-img">
+        </div>
+        <div class="content reveal">
+          <h2>About Me</h2>
+          <p>Web Developer with skill in building web
+          applications using React and backend technologies .
+          Dedicated to crafting clean, efficient, and scalable solutions.</p>
+          <p>Experties with HTML/CSS/JS, React, Tailwind, Figma — always exploring better ways to blend aesthetics
+            with function.</p>
+
+          <div class="tech-stack">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+              alt="JavaScript">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+              alt="Tailwind">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="reveal">
+      <h2>My Projects</h2>
+      <div class="project-grid">
+
+        <div class="project-card reveal">
+          <img src="images/project1.png" alt="Gymcraft" loading="lazy">
+          <div class="project-overlay">
+            <div class="project-title">Gymcraft</div>
+            <p>An e-commerce platform.</p>
+            <div class="project-links">
+              <a href="#" class="project-btn demo-btn" style="opacity:0.5; cursor:not-allowed;">
+                <span>Working...</span>
+              </a>
+              <a href="https://github.com/Samirpudasaini/Gymcraft" target="_blank" rel="noopener noreferrer"
+                class="project-btn github-btn" aria-label="GitHub repository">
+                <svg viewBox="0 0 24 24" class="github-icon">
+                  <path
+                    d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.377.202 2.394.1 2.647.64.699 1.026 1.592 1.026 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.854 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12c0-5.523-4.478-10-10-10z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <img src="images/project2.png" alt="Voting System" loading="lazy">
+          <div class="project-overlay">
+            <div class="project-title">Voting System</div>
+            <p>A C++ console based Voting system.</p>
+            <div class="project-links">
+              <a href="#" class="project-btn demo-btn" style="opacity:0.5; cursor:not-allowed;">
+                <span>No Live Demo</span>
+              </a>
+              <a href="https://github.com/Samirpudasaini/voting_system" target="_blank" rel="noopener noreferrer"
+                class="project-btn github-btn" aria-label="GitHub repository">
+                <svg viewBox="0 0 24 24" class="github-icon">
+                  <path
+                    d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.377.202 2.394.1 2.647.64.699 1.026 1.592 1.026 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.854 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12c0-5.523-4.478-10-10-10z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <img src="images/project3.png" alt="Portfolio" loading="lazy">
+          <div class="project-overlay">
+            <div class="project-title">Portfolio</div>
+            <p>Built a Portfolio website.</p>
+            <div class="project-links">
+              <a href="https://samirpudasaini.com" target="_blank" rel="noopener noreferrer"
+                class="project-btn demo-btn">
+                <span>Live Demo</span>
+              </a>
+              <a href="https://github.com/Samirpudasaini/samirportfolio" target="_blank" rel="noopener noreferrer"
+                class="project-btn github-btn" aria-label="GitHub repository">
+                <svg viewBox="0 0 24 24" class="github-icon">
+                  <path
+                    d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.377.202 2.394.1 2.647.64.699 1.026 1.592 1.026 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.854 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12c0-5.523-4.478-10-10-10z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  <section id="contact" class="reveal">
+    <h2>Let's Talk</h2>
+
+    <!-- Contact info with icons (no boxes, just icon + text) -->
+    <div class="contact-info">
+      <div class="contact-item">
+        <svg class="contact-icon" viewBox="0 0 24 24">
+          <path
+            d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.22 11.06 11.06 0 003.45.55 1 1 0 011 1v3.5a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.06 11.06 0 00.55 3.45 1 1 0 01-.22 1.11l-2.2 2.2z" />
+        </svg>
+      <a href="tel:+9779863480542" class="contact-btn" aria-label="Call Samir at +977 9863480542"><p>+977 9863480542</p> </a>
+      </div>
+
+      <div class="contact-item">
+        <svg class="contact-icon gmail" viewBox="0 0 24 24">
+          <path
+            d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+        </svg>
+        <p>samirpudasaini51@gmail.com</p>
+      </div>
+
+      <div class="contact-item">
+        <svg class="contact-icon" viewBox="0 0 24 24">
+          <path
+            d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+        </svg>
+        <p>Kathmandu, Nepal</p>
+      </div>
+    </div>
+
+    <!-- Existing social icons -->
+    <div class="hero-social">
+      <a href="https://github.com/Samirpudasaini" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg class="social-icon github" viewBox="0 0 24 24">
+          <path
+            d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.377.202 2.394.1 2.647.64.699 1.026 1.592 1.026 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.854 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12c0-5.523-4.478-10-10-10z" />
+        </svg>
+      </a>
+
+      <a href="https://www.linkedin.com/in/samir-pudasaini-b6840927b" target="_blank" rel="noopener noreferrer"
+        aria-label="LinkedIn">
+        <svg class="social-icon linkedin" viewBox="0 0 24 24">
+          <path
+            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-1.337-.029-3.058-1.867-3.058-1.867 0-2.152 1.459-2.152 2.966v5.696h-3v-11h2.882v1.509h.039c.401-.757 1.381-1.557 2.837-1.557 3.033 0 3.597 1.997 3.597 4.597v6.451z" />
+        </svg>
+      </a>
+
+      <a>
+        <svg class="social-icon gmail" viewBox="0 0 24 24">
+          <path
+            d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+        </svg>
+      </a>
+    </div>
+
+    <form id="contact-form" class="contact-form">
+      <input type="text" name="name" placeholder="Name" required aria-label="Name" />
+      <input type="email" name="email" placeholder="Email" required aria-label="Email" />
+      <textarea name="message" placeholder="Your message..." rows="6" required aria-label="Message"></textarea>
+
+      <button type="submit">Send Message</button>
+
+      <!-- Success / error message will appear here -->
+      <div id="form-message" class="form-message" aria-live="polite"></div>
+    </form>
+  </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Samir Pudasaini — All rights reserved</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
