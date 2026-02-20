@@ -260,47 +260,63 @@
     </div>
 
     <form id="contact-form" class="contact-form">
-      <input type="text" name="name" placeholder="Name" required aria-label="Name" />
-      <input type="email" name="email" placeholder="Email" required aria-label="Email" />
-      <textarea name="message" placeholder="Your message..." rows="6" required aria-label="Message"></textarea>
+      <input type="text" name="name" placeholder="Name" required aria-label="Name" id="name"/>
+      <input type="email" name="email" placeholder="Email" required aria-label="Email" id="email"/>
+      <textarea name="message" placeholder="Your message..." rows="6" required aria-label="Message" id="message"></textarea>
 
-      <button type="submit">Send Message</button>
+      <button type="submit" value="submit" class="sub"
+      id="submit">Send Message</button>
 
       <!-- Success / error message will appear here -->
       <div id="form-message" class="form-message" aria-live="polite"></div>
     </form>
-    <script>
-      import { getFirestore, addDoc, collection } from 'firebase/firestore';
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getDatabase, ref, push, set }
+            from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
 
-        // ... (your Firebase initialization and db instance)
+        // Firebase config    
+        const firebaseConfig = {
+          apiKey: "YOUR_API_KEY",
+          authDomain: "portfolio-1cb90.firebaseapp.com",
+          databaseURL: "https://portfolio-1cb90-default-rtdb.firebaseio.com",
+          projectId: "portfolio-1cb90",
+          storageBucket: "portfolio-1cb90.appspot.com",
+          messagingSenderId: "446643265196",
+          appId: "1:446643265196:web:736a044b025d32c3908909"
+        };
+        // Initialize Firebase
+          const app = initializeApp(firebaseConfig);
+          const db = getDatabase(app);
 
-        const contactForm = document.getElementById('contact-form');
-        const formMessage = document.getElementById('form-message');
+          const form = document.getElementById("contact-form");
+          const messageDiv = document.getElementById("form-message");
 
-        contactForm.addEventListener('submit', async (e) => {
-          e.preventDefault(); // Prevent default form submission
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
 
-          const name = contactForm.elements['name'].value;
-          const email = contactForm.elements['email'].value;
-          const message = contactForm.elements['message'].value;
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
 
-          try {
-            await addDoc(collection(db, 'contacts'), {
+            // Create unique ID using push()
+            const newMessageRef = push(ref(db, "contacts"));
+
+            set(newMessageRef, {
               name: name,
               email: email,
               message: message,
               timestamp: Date.now()
+            })
+            .then(() => {
+            messageDiv.textContent = "Message sent successfully!";
+            form.reset();
+            })
+            .catch((error) => {
+            messageDiv.textContent = "Error: " + error.message;
             });
-            formMessage.textContent = 'Message sent successfully!';
-            formMessage.style.color = 'green';
-            contactForm.reset(); // Clear the form
-          } catch (error) {
-            console.error("Error adding document: ", error);
-            formMessage.textContent = 'Failed to send message.';
-            formMessage.style.color = 'red';
-          }
-        });
-
+          });
     </script>
   </section>
   </main>
